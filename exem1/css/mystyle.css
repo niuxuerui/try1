@@ -63,12 +63,28 @@ header .h-left i {
   text-align: center;
 }
 
+@keyframes h {
+  0% {
+    height: 1.6rem;
+    background: #4b504b;
+  }
+  50% {
+    height: 2.66667rem;
+    background: #0fedf5;
+  }
+  100% {
+    height: 1.6rem;
+    background: #4b504b;
+  }
+}
+
 footer {
   width: 100%;
   height: 1.6rem;
   box-sizing: border-box;
   padding: 0 0.53333rem 0 0.26667rem;
-  background: green;
+  background: #4b504b;
+  animation: h 3s 1;
 }
 
 footer dl {
