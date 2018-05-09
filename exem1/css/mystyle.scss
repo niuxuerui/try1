@@ -60,11 +60,28 @@ header {
 }
 
 //脚
+@keyframes h {
+    0% {
+        height: pxTorem(60px);
+        background: rgb(75, 80, 75);
+    }
+    50% {
+        height: pxTorem(100px);
+        background: rgb(15, 237, 245);
+    }
+    100% {
+        height: pxTorem(60px);
+        background: rgb(75, 80, 75);
+    }
+}
+
 footer {
     @include wh($m, pxTorem(60px));
     box-sizing: border-box;
     padding: 0 pxTorem(20px) 0 pxTorem(10px);
     background: rgb(75, 80, 75);
+    color: #fff;
+    animation: h 3s 1;
     dl {
         @include wh($m, $m);
         display: flex;
