@@ -48,7 +48,7 @@ footer {
     @include wh($m, pxTorem(60px));
     box-sizing: border-box;
     padding: 0 pxTorem(20px) 0 pxTorem(10px);
-    background: #313131;
+    background: green;
     dl {
         @include wh($m, $m);
         display: flex;
