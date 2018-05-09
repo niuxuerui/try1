@@ -1,0 +1,155 @@
+@import "./mixin.scss";
+$m:100%;
+body {
+    font-size: 0.32rem;
+}
+
+//最大的盒子
+.wrap {
+    @include wh($m, $m);
+    display: flex;
+    flex-direction: column;
+}
+
+//头部
+header {
+    position: relative;
+    @include wh($m, pxTorem(40px));
+    line-height: pxTorem(40px);
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    span {
+        font-size: pxTorem(20px);
+    }
+    .h-left {
+        position: absolute;
+        left: pxTorem(14px);
+        top: 0;
+        i {
+            font-size: pxTorem(16px);
+        }
+    }
+}
+
+//自定义按钮
+.zibtn {
+    display: flex;
+    @include wh($m, pxTorem(40px));
+    line-height: pxTorem(40px);
+    border-bottom: 1px solid #ccc;
+    span {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+//脚
+footer {
+    @include wh($m, pxTorem(60px));
+    box-sizing: border-box;
+    padding: 0 pxTorem(20px) 0 pxTorem(10px);
+    background: #313131;
+    dl {
+        @include wh($m, $m);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        dt {
+            @include wh(pxTorem(30px), pxTorem(30px));
+            border-radius: 50%;
+            background: #636363;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .nana {
+                font-size: pxTorem(20px);
+                color: #fff;
+            }
+        }
+        dd {
+            color: #fff;
+            h4 {
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+//内容
+section {
+    flex: 1;
+    @include wh($m, $m);
+    overflow: hidden;
+    .box {
+        @include wh($m, $m);
+        overflow: hidden;
+        background: #e8e8e8;
+    }
+    .scroll {
+        margin-top: pxTorem(12px);
+        @include wh($m, auto);
+        background: #fff;
+    }
+}
+
+.login {
+    box-sizing: border-box;
+    padding: 0 pxTorem(15px);
+    @include wh($m, pxTorem(90px));
+    border-bottom: 1px solid #ccc;
+    dl {
+        display: flex;
+        align-items: center;
+        @include wh($m, $m);
+        dt {
+            flex-shrink: 0;
+            @include wh(pxTorem(60px), pxTorem(60px));
+            border-radius: 50%;
+            text-align: center;
+            line-height: pxTorem(60px);
+            background: #e8e8e8;
+            i {
+                font-size: pxTorem(30px);
+            }
+        }
+        dd {
+            font-size: pxTorem(20px);
+            flex: 1;
+            margin-left: pxTorem(12px);
+        }
+    }
+}
+
+.peizhi {
+    @include wh($m, auto);
+    dl {
+        @include wh($m, pxTorem(60px));
+        line-height: pxTorem(60px);
+        display: flex;
+        align-items: center;
+        dt {
+            flex-shrink: 0;
+            @include wh( pxTorem(50px), $m);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                @include wh( pxTorem(22px), pxTorem(22px));
+                font-size: 0;
+            }
+        }
+        dd {
+            flex: 1;
+            height: 100%;
+            font-size: pxTorem(20px);
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            i {
+                font-size: pxTorem(15px);
+                margin-right: pxTorem(15px);
+            }
+        }
+    }
+}
