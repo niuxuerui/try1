@@ -11,6 +11,21 @@ body {
     flex-direction: column;
 }
 
+@keyframes t {
+    0% {
+        height: pxTorem(40px);
+        background: #fff;
+    }
+    50% {
+        height: pxTorem(100px);
+        background: rgb(15, 237, 245);
+    }
+    100% {
+        height: pxTorem(40px);
+        background: #fff;
+    }
+}
+
 //头部
 header {
     position: relative;
@@ -18,6 +33,7 @@ header {
     line-height: pxTorem(40px);
     border-bottom: 1px solid #ccc;
     text-align: center;
+    animation: t 3s 1;
     span {
         font-size: pxTorem(20px);
     }
